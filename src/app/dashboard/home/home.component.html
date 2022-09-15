@@ -1,0 +1,83 @@
+<header focusOnNavigation class="docs-header-background"
+         aria-label="Get started" id="homepage-header">
+  <div class="docs-header-section">
+    <div class="docs-header-headline">
+      <h1 class="mat-h1">Welcome to MEGARes</h1>
+      <h2>Antimicrobial Database for High-Throughput Sequencing</h2>
+    </div>
+    <div class="docs-header-start">
+      <a routerLink="/browse"><button mat-raised-button>Browse Database</button></a>
+    </div>
+  </div>
+</header>
+
+<div class="center-container">
+    <div class="center-content">        
+        <p>The MEGARes database contains sequence data for approximately 8,000 hand-curated antimicrobial resistance genes 
+            accompanied by an annotation structure that is optimized for use with high throughput sequencing. The acyclical 
+            annotation graph of MEGARes allows for accurate, count-based, hierarchical statistical analysis of resistance at 
+            the population level, much like microbiome analysis, and is also designed to be used as a training database for 
+            the creation of statistical classifiers (Figure 1).
+        </p>
+        <br>
+
+        <div style="margin:auto;border:solid 5px #eee;padding:15px;max-width:630px">
+            <img src="../../../assets/web-pag-figure1.png" max-width="600px"><p>&nbsp;</p>
+            <strong>Legend for Figure 1:</strong>
+            <p>
+                Figure 1.&nbsp; A.) This annotation graph contains no cycles (is a tree), as nodes 1 and 2 do not share children
+                and are therefore independent.&nbsp; B.)&nbsp; In contrast, node 3 and node 4 share node 5 as a child, 
+                which creates a cycle in the annotation graph
+            </p>
+        </div>
+        <br>
+
+        <h2>When should I use MEGARes?</h2>
+        <p>For the population-level profiling or population comparison of antimicrobial resistance (count-based analyses,
+            similar to microbiome analysis). MEGARes can also be used for the construction of sequence classifiers, e.g. 
+            naive Bayes, hidden Markov models. For users who wish to predict the protein function and functional mutations 
+            in their sequencing data, we recommend using a database suited for functional genomics, such as the Comprehensive 
+            Antibiotic Resistance Database (CARD).
+        </p>
+        <br>
+        
+        <h2>What distinguishes MEGARes from other databases?</h2>
+        <p>
+            MEGARes has been designed for use in the computational analysis of large-scale sequencing data (on the order of terabytes) 
+            in a way that is fast and statistically accurate for count-based data and the construction of sequence classifiers. 
+            The latest update in MEGARes 2.0 (https://megares.meglab.org) incorporates previously published resistance sequences for 
+            antimicrobial drugs, while also expanding to include published sequences for metal and biocide resistance determinants.        
+        </p>
+
+        <ul>
+            <li>Sequences are annotated in a biologically meaningful way that preserves within-group nucleotide similarity.</li>
+            <li>The annotation graph contains no cycles.  Therefore, it contains no statistical dependencies and is accurate for the count-based analyses commonly performed in population-level profiling (Figure 1).</li>
+            <li>The annotation graph contains only three hierarchical levels, which maximizes the number of representative sequences for each annotation node.  This is designed to work well for the construction of statistical classifiers.  The annotation levels are:
+            <ul>
+            <li>Type: the type of antimicrobial compound, e.g. drugs, biocides, multi-compound</li>
+            <li>Class: the major antimicrobial chemical class, e.g. betalactams, aminoglycosides</li>
+            <li>Mechanism: the biological mechanism of resistance, e.g. penicillin binding protein</li>
+            <li>Group: the gene- or operon-level group for that sequence, e.g. SHV betalactamase, MCR-1</li>
+            <li>All sequence metadata has been formatted to work well with the majority of bioinformatics software.  Sequence headers contain no whitespace or non-compliant symbols.</li>
+            <li>All sequences and annotations have been hand-curated using a multi-factorial approach.  See the manuscript for more details.</li>
+            </ul>
+            </li>
+        </ul>
+        <br>
+
+        <h2>Citation for MEGARes 2.0 and AMR++ 2.0:</h2>
+        <p>Doster, E., Lakin, S. M., Dean, C. J., Wolfe, C., Young, J. G., Boucher, C., Belk K. E., Noyes N. R., Morley P. S. (2019)</p>
+        <p>MEGARes 2.0: a database for classification of antimicrobial drug, biocide and metal resistance determinants in metagenomic sequence data. Nucleic Acids Res. doi:10.1093/nar/gkz1010.<br>
+        <a href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz1010/5624973">Click to Download Citation in different formats</a></p>        
+        <br>
+
+        <h2>Citation for MEGARes and AmrPlusPlus:</h2>
+        <p>Lakin, S.M., Dean, C., Noyes, N.R., Dettenwanger, A., Spencer Ross, A., Doster, E., Rovira, P., Abdo, Z., Jones, K.L., Ruiz, J., Belk, K.E., Morley, P.S., Boucher, C. (2016)</p>
+        <p>MEGARes: an antimicrobial database for high throughput sequencing. Nucleic Acids Res., 45. DOI: 10.1093/nar/gkw1009<br>
+            <a href="http://nar.oxfordjournals.org/citmgr?gca=nar%3Bgkw1009v1">Click to Download Citation</a></p>                
+   
+    </div>
+</div>
+
+
+

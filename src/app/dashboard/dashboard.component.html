@@ -1,0 +1,79 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav mat-elevation-z8" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      opened="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+      <a mat-list-item routerLink="/browse">
+        <mat-icon>folder_open</mat-icon>
+        <span>Browse</span>
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>import_contacts</mat-icon>
+        <span>AMR++ Docs</span>
+      </a>
+      <a mat-list-item href="/download">
+        <mat-icon>cloud_download</mat-icon>
+        <span>Download</span>
+      </a>
+      <a mat-list-item href="/changelog">
+        <mat-icon>info</mat-icon>
+        <span>Change Log</span>
+      </a>      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z8">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>MEGARes</span>
+      <span *ngIf="!(isHandset$ | async)" class="example-spacer"></span>
+
+      <div *ngIf="!(isHandset$ | async)" class="navbar-header">
+        <a mat-button routerLink="/" >        
+          <span>Home</span>
+        </a>
+        <a mat-button routerLink="/browse" >        
+          <span>Browse</span>
+        </a>
+        <a mat-button routerLink="/" >        
+          <span>AMR++ Docs</span>
+        </a>
+        <a mat-button routerLink="/download" >        
+          <span>Download</span>
+        </a>
+        <a mat-button routerLink="/changelog" >        
+          <span>Change Log</span>
+        </a>
+      </div>
+
+      
+
+      <!--
+      <mat-form-field *ngIf="!(isHandset$ | async)" style="width: 20rem" floatLabel="never">
+        <mat-label class="search-input">Search MEGARes by keyword or annotation term</mat-label>
+        <input matInput          
+          #searchInput="matInput" 
+          type="text"           
+          autocomplete="off"/>
+        <mat-icon [color]="searchInput.focused ? 'primary' : ''" matSuffix>search</mat-icon>  
+      </mat-form-field>  
+      -->
+    
+    </mat-toolbar>
+    <div id="centerContainer">
+      <router-outlet></router-outlet>
+    </div>    
+  </mat-sidenav-content>
+</mat-sidenav-container>

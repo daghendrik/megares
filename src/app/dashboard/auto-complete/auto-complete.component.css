@@ -1,0 +1,15 @@
+.autocomplete-item {
+    height: 50px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.mat-option {
+    margin: 0 0;
+    overflow: visible;
+    line-height: initial;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}

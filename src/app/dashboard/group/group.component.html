@@ -1,0 +1,32 @@
+<div class="center-container">
+    <div class="center-content">
+        <ol class="breadcrumb">
+            <li>
+                <a href="./browse">Browse</a> / <a [routerLink]="getClassRoute()">{{theClass}}</a> / <a [routerLink]="getMechanismRoute()">{{mechanism}}</a> / {{group}}
+            </li>
+        </ol>        
+        <h1>{{group}}</h1>
+        <div>{{description}}</div>
+        <h2 *ngIf="links.length">References</h2>        
+        <ul>
+            <li *ngFor="let link of links">
+                <a href="{{link}}">{{ link }}</a>
+            </li>
+        </ul>
+        <h2 *ngIf="otherGroups.size">Other Groups in {{mechanism}}</h2>
+        <ul>
+            <li *ngFor="let group of otherGroups">
+                <a [routerLink]="getOtherGroupsLink(group)">{{ group }}</a>
+            </li>
+        </ul>
+        <h2>Sequences</h2>
+        <p><a href="javascript:void(0);" (click)="downloadText()">Download Sequences</a></p>
+        
+        
+        <div class="sequences well">
+            <p *ngFor="let fasta of fastas" [innerHTML]="fasta">                                
+            </p>    
+        </div>    
+        
+    </div>
+</div>

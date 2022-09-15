@@ -1,0 +1,19 @@
+<mat-form-field>
+	<input type="text"
+    placeholder="Search MEGARes by keyword or annotation term"
+    [formControl]="control"
+    matInput
+    #searchInput="matInput" 
+    [matAutocomplete]="auto">
+    <mat-icon [color]="searchInput.focused ? 'primary' : ''" matSuffix>search</mat-icon>  
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="optionSelected($event.option.value)">
+    <cdk-virtual-scroll-viewport class="autocomplete-test-viewport" 
+      [ngStyle]="{'height': height}"
+      itemSize="10" >
+      <mat-option *cdkVirtualFor="let option of filteredOptions" [value]="option.item.url" class="autocomplete-item">
+        <span>{{option.item.render}} </span>        
+        <small>{{option.item.header}}</small>
+      </mat-option>
+    </cdk-virtual-scroll-viewport>
+  </mat-autocomplete>
+</mat-form-field>

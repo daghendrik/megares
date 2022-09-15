@@ -1,0 +1,12 @@
+<div class="center-container">
+    <div class="center-content">
+
+        <app-auto-complete></app-auto-complete>
+
+        <ul>
+            <li *ngFor="let class of classes">
+                <a [routerLink]="getLink(class)">{{ class }}</a>
+            </li>
+        </ul>
+    </div>
+</div>

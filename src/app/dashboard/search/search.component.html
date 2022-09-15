@@ -1,0 +1,14 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Sequence</mat-label>
+      <input matInput
+            aria-label="Sequence"
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="optionSelected($event.option.value)">
+        <mat-option *ngFor="let seq of filteredSearchData | async" [value]="seq.url">
+          {{seq.url}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
