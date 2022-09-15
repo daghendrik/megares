@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { DbService } from '../../db.service';
 import { saveAs } from 'file-saver';
 
@@ -16,10 +16,7 @@ export class ClassComponent implements OnInit {
   mechanisms: Set<string> = new Set();
   sequenceDownload: string = '';
 
-  constructor(
-    private activatedRoute: ActivatedRoute, 
-    private router: Router,
-    private db:DbService) { }
+  constructor( private activatedRoute: ActivatedRoute, private db:DbService) { }
 
   ngOnInit(): void {
     const classy = this.activatedRoute.snapshot.paramMap.get('classdesc');

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { filter } from 'rxjs';
 import { DbService } from '../../db.service';
@@ -9,7 +9,7 @@ import { saveAs } from 'file-saver';
   templateUrl: './mechanism.component.html',
   styleUrls: ['./mechanism.component.css']
 })
-export class MechanismComponent implements OnInit {
+export class MechanismComponent {
 
   theClass: string = '';
   mechanism: string = '';
@@ -27,10 +27,6 @@ export class MechanismComponent implements OnInit {
         this.updateView();
       })      
     }
-
-  ngOnInit(): void {
-    //this.updateView();
-  }
 
   private updateView(): void {
     this.theClass = '';

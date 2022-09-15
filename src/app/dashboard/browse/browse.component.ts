@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { DbService } from 'src/app/db.service';
-
-
 
 @Component({
   selector: 'app-browse',
@@ -27,7 +23,5 @@ export class BrowseComponent implements OnInit {
   getLink(className: string): string {
     return './'+encodeURIComponent(className.replace(/ /g, '_'));
   }
-
-
 
 }

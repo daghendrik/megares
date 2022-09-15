@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { DbService } from 'src/app/db.service';
@@ -9,7 +9,7 @@ import { saveAs } from 'file-saver';
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.css']
 })
-export class GroupComponent implements OnInit {
+export class GroupComponent {
 
   theClass: string = '';
   mechanism: string = '';
@@ -28,10 +28,6 @@ export class GroupComponent implements OnInit {
         this.updateView();
       })      
     }
-
-  ngOnInit(): void {
-    //this.updateView();
-  }
 
   private updateView(): void {
     this.theClass = '';

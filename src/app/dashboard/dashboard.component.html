@@ -13,10 +13,14 @@
         <mat-icon>folder_open</mat-icon>
         <span>Browse</span>
       </a>
-      <a mat-list-item href="#">
+      <a mat-list-item href="https://docs-v1.meglab.org">
         <mat-icon>import_contacts</mat-icon>
-        <span>AMR++ Docs</span>
+        <span>AMR++ Docs (v1)</span>
       </a>
+      <a mat-list-item href="https://docs-v2.meglab.org">
+        <mat-icon>import_contacts</mat-icon>
+        <span>AMR++ Docs (v2)</span>
+      </a>      
       <a mat-list-item href="/download">
         <mat-icon>cloud_download</mat-icon>
         <span>Download</span>
@@ -47,9 +51,12 @@
         <a mat-button routerLink="/browse" >        
           <span>Browse</span>
         </a>
-        <a mat-button routerLink="/" >        
-          <span>AMR++ Docs</span>
+        <a mat-button href="https://docs-v1.meglab.org" >        
+          <span>AMR++ Docs (v1)</span>
         </a>
+        <a mat-button href="https://docs-v2.meglab.org" >        
+          <span>AMR++ Docs (v2)</span>
+        </a>        
         <a mat-button routerLink="/download" >        
           <span>Download</span>
         </a>
@@ -57,19 +64,6 @@
           <span>Change Log</span>
         </a>
       </div>
-
-      
-
-      <!--
-      <mat-form-field *ngIf="!(isHandset$ | async)" style="width: 20rem" floatLabel="never">
-        <mat-label class="search-input">Search MEGARes by keyword or annotation term</mat-label>
-        <input matInput          
-          #searchInput="matInput" 
-          type="text"           
-          autocomplete="off"/>
-        <mat-icon [color]="searchInput.focused ? 'primary' : ''" matSuffix>search</mat-icon>  
-      </mat-form-field>  
-      -->
     
     </mat-toolbar>
     <div id="centerContainer">

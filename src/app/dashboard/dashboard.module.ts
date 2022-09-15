@@ -17,7 +17,6 @@ import { DownloadComponent } from './download/download.component';
 import { ClassComponent } from './class/class.component';
 import { GroupComponent } from './group/group.component';
 import { MechanismComponent } from './mechanism/mechanism.component';
-import { SearchComponent } from './search/search.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon';
 import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
@@ -32,7 +31,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     ClassComponent,
     GroupComponent,
     MechanismComponent,
-    SearchComponent,
     AutoCompleteComponent
   ],
   imports: [

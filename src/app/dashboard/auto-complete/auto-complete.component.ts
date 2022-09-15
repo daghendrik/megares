@@ -1,9 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { startWith, map } from 'rxjs/operators';
 import { DbService } from '../../db.service';
 import Fuse from 'fuse.js'
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 interface Sequence {
   id: number;
@@ -39,7 +39,7 @@ export class AutoCompleteComponent implements OnInit {
   searchOptions:any;
   fuse:any;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private db: DbService) {
+  constructor(private router: Router, private db: DbService) {
     this.searchOptions = {
       shouldSort: true,
       threshold: 0.3,
