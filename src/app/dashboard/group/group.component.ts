@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
-import { DbService } from 'src/app/db.service';
+import { DbService } from '../../db.service';
 import { saveAs } from 'file-saver';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DbService } from 'src/app/db.service';
+import { DbService } from '../../db.service';
 
 @Component({
   selector: 'app-browse',
