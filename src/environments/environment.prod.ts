@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_HOST: 'http://localhost:8080',
+  API_HOST: 'https://megares-dw.fly.dev',
 };
