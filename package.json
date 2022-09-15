@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href /megares/",
+    "copy404": "cp ./dist/megares/index.html ./dist/megares/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
